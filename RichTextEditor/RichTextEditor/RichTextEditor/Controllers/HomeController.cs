@@ -4,20 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 
 namespace RichTextEditor.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
+        List<string> searchTerms = new List<string>();
 
         [HttpPost]
         public ActionResult Index(RichTextEditorViewModel slide)
         {
-            List<string> searchTerms = new List<string>();
 
             string titleText = slide.Title;
             if (titleText != null)
@@ -38,8 +35,41 @@ namespace RichTextEditor.Controllers
                 searchTerms.Add(bResult);
             }
 
-
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+            RichTextEditorViewModel model = new RichTextEditorViewModel();
+
+            model.ImagePaths = new List<string>();
+
+            DirectoryInfo d = new DirectoryInfo(@"C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\images");
+            FileInfo[] Files = d.GetFiles("*.png"); //Getting png files
+            string str = "";
+            foreach (FileInfo file in Files)
+            {
+                str = file.Name;
+                model.ImagePaths.Add(str);
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult GeneratePowerpoint(string[] imageCheckBox)
+        {
+            RichTextEditorViewModel model = new RichTextEditorViewModel();
+            model.ImagePaths = new List<string>();
+
+            for (int i = 0; i < imageCheckBox.Length; i++)
+            {
+                model.ImagePaths.Add(imageCheckBox[i]);
+            }
+            
+            return View(model);
+        }
+        
     }
 }

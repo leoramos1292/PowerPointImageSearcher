@@ -23,8 +23,13 @@ textarea {
     max-width: 280px;
 }
 
+.imageWrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .cardStyle {
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
 }

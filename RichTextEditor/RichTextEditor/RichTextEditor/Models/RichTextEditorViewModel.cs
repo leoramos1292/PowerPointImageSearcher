@@ -15,5 +15,6 @@ namespace RichTextEditor.Models
         [AllowHtml]
         [Display(Name = "Message")]
         public string Message { get; set; }
+        public List<string> ImagePaths { get; set; }
     }
 }
