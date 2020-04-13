@@ -10,38 +10,35 @@ namespace RichTextEditor.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        } 
+
         List<string> searchTerms = new List<string>();
 
         [HttpPost]
-        public ActionResult Index(RichTextEditorViewModel slide)
-        {
-
-            string titleText = slide.Title;
-            if (titleText != null)
-            {
-                int tFrom = titleText.IndexOf("<p>") + "<p>".Length;
-                int tTo = titleText.LastIndexOf("</p>");
-                string tResult = titleText.Substring(tFrom, tTo - tFrom);
-                searchTerms.Add(tResult);
-            }
-
-            string bodyText = slide.Message;
-            //bool bold
-            if (bodyText != null && bodyText.Contains("<b>"))
-            {
-                int bFrom = bodyText.IndexOf("<b>") + "<b>".Length;
-                int bTo = bodyText.LastIndexOf("</b>");
-                string bResult = bodyText.Substring(bFrom, bTo - bFrom);
-                searchTerms.Add(bResult);
-            }
-
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult Index()
+        public ActionResult SelectImage(RichTextEditorViewModel slide)
         {
             RichTextEditorViewModel model = new RichTextEditorViewModel();
+                string titleText = slide.Title;
+                if (titleText != null)
+                {
+                    int tFrom = titleText.IndexOf("<p>") + "<p>".Length;
+                    int tTo = titleText.LastIndexOf("</p>");
+                    string tResult = titleText.Substring(tFrom, tTo - tFrom);
+                    searchTerms.Add(tResult);
+                }
+
+                string bodyText = slide.Message;
+                //bool bold
+                if (bodyText != null && bodyText.Contains("<b>"))
+                {
+                    int bFrom = bodyText.IndexOf("<b>") + "<b>".Length;
+                    int bTo = bodyText.LastIndexOf("</b>");
+                    string bResult = bodyText.Substring(bFrom, bTo - bFrom);
+                    searchTerms.Add(bResult);
+                }
 
             model.ImagePaths = new List<string>();
 
@@ -53,6 +50,7 @@ namespace RichTextEditor.Controllers
                 str = file.Name;
                 model.ImagePaths.Add(str);
             }
+
 
             return View(model);
         }

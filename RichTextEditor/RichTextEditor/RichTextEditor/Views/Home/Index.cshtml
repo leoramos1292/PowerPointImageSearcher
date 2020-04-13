@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-md-12">
         <section id="loginForm">
-            @using (Html.BeginForm("Index", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            @using (Html.BeginForm("SelectImage", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
 
@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                     <div class="float-left">
-                        <input type="submit" value="Generate Images" class="btn btn-default" />
+                        <input type="submit" name="generateImages" value="Generate Images" class="btn btn-default" />
                     </div>
                 </div>
             }
@@ -43,28 +43,6 @@
 
 <hr />
 
-<div>
-    @using (Html.BeginForm("GeneratePowerPoint", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-    <div class="container imageWrapper">
-        <div class="row">
-            @for (int i = 0; i < Model.ImagePaths.Count; i++)
-            {
-                <div class="col-sm cardStyle">
-                    <img class="card-img-top" style="width:200px; height:200px;" src="@Url.Content("~/images/" + Model.ImagePaths[i])" alt="Card image cap"><br />
-                    <input type="checkbox" name="imageCheckBox" id="~/images/@Model.ImagePaths[i]" value="~/images/@Model.ImagePaths[i]" style="margin-bottom:15px;" />
-                </div>
-            }
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="float-left">
-            <input type="submit" value="Generate PowerPoint" class="btn btn-default" />
-        </div>
-    </div>
-    }
-</div>
 
 @section Scripts
 {
