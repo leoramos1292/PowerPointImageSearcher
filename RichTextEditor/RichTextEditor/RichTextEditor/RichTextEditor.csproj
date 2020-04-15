@@ -197,14 +197,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\2.png" />
-    <Content Include="images\1.png" />
-    <Content Include="images\3.png" />
-    <Content Include="images\4.png" />
-    <Content Include="images\5.png" />
-    <Content Include="images\6.png" />
-    <Content Include="images\7.png" />
-    <Content Include="images\8.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -235,6 +227,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\GeneratePowerpoint.cshtml" />
     <Content Include="Views\Home\SelectImage.cshtml" />
+    <Content Include="Views\Home\ErrorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
