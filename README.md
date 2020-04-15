@@ -1,4 +1,4 @@
-# Power Poin tImage Searcher
+# Power Point Image Searcher
 
 Hello! Thank you for checking out this project! This porgram helps you in creating a PowerPoint slide with a title, a body and images.
 
