@@ -221,3 +221,13 @@ C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEdi
 C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\obj\Debug\RichTextEditor.csproj.CopyComplete
 C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\obj\Debug\RichTextEditor.dll
 C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\obj\Debug\RichTextEditor.pdb
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Core.dll
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Customsearch.v1.dll
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.dll
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.PlatformServices.dll
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.pdb
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.xml
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Core.pdb
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Core.xml
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Customsearch.v1.pdb
+C:\Users\lazlo\Desktop\GitHub\PowerPointImageSearcher\RichTextEditor\RichTextEditor\RichTextEditor\bin\Google.Apis.Customsearch.v1.xml
