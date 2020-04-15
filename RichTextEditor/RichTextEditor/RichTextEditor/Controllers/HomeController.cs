@@ -19,7 +19,6 @@ namespace RichTextEditor.Controllers
             return View();
         }
 
-
         //This method recieves input from the two text boxes in the index view, uses that input to do a google API call, and get google image links and puts them in a list
         [HttpPost]
         public async Task<ActionResult> SelectImage(RichTextEditorViewModel model)
@@ -102,7 +101,6 @@ namespace RichTextEditor.Controllers
             Tuple<string, int> result = new Tuple<string, int>(s.Substring(startIndex, endIndex - startIndex), endIndex+4);
             return result;
         }
-    
 
         //This Method receives the images with selected checkboxes and passes them to the GeneratePowerPointFile method which creates a powerpoint file using the images passed to it
         [HttpPost]
@@ -179,11 +177,7 @@ namespace RichTextEditor.Controllers
                     slide.Shapes.AddPicture(model.ImagePaths[1], Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoTrue, 466, shape.Top + 35, 400, shape.Height);
                 }
 
-
-
                 slide.NotesPage.Shapes[2].TextFrame.TextRange.Text = "Leo Ramos - 2020";
-
-
 
                 pptPresentation.SaveAs(@"c:\temp\fppt.pptx", Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
                 //pptPresentation.Close();
